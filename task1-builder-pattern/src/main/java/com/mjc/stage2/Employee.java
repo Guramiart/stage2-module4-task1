@@ -70,11 +70,7 @@ public class Employee {
 
     public static class EmployeeBuilder {
 
-        private final Employee employee;
-
-        public EmployeeBuilder() {
-            employee = new Employee();
-        }
+        private final Employee employee = new Employee();
 
         public EmployeeBuilder setName(String name){
             employee.name = name;
