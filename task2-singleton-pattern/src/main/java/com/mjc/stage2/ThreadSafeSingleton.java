@@ -11,10 +11,7 @@ public class ThreadSafeSingleton {
         ThreadSafeSingleton localInstance = instance;
         if(localInstance == null) {
             synchronized (mutex) {
-                localInstance = instance;
-                if(localInstance == null) {
-                    instance = localInstance = new ThreadSafeSingleton();
-                }
+                instance = localInstance = new ThreadSafeSingleton();
             }
         }
         return localInstance;
